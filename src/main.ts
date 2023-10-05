@@ -62,6 +62,12 @@ describe("Some Test Suite", () => {
     equal(result[0].username, "Hello, World");
   });
 
+  test("Delete User", () => {
+    doesNotReject(
+      async () => await db.delete(users).where(eq(users.username, "Baz"))
+    );
+  });
+
   test("Add new Task", async () => {
     const oneHourFromNow = new Date();
     oneHourFromNow.setHours(oneHourFromNow.getHours() + 1);
