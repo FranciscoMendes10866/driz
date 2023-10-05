@@ -1,0 +1,24 @@
+{
+  "name": "driz",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/main.ts",
+    "migration:gen": "drizzle-kit generate:sqlite",
+    "migration:apply": "drizzle-kit push:sqlite",
+    "admin:ui": "drizzle-kit studio --port 8080"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.5",
+    "bun-types": "latest",
+    "drizzle-kit": "^0.19.13",
+    "tsx": "^3.13.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "better-sqlite3": "^8.7.0",
+    "drizzle-orm": "^0.28.6"
+  }
+}
